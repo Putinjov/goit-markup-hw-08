@@ -1,0 +1,46 @@
+.clients-list {
+  @include grid;
+
+  --items: 2;
+
+  @media screen and (min-width: 768px) {
+    --items: 3;
+  }
+
+  @media screen and (min-width: 1200px) {
+    --items: 6;
+  }
+}
+.clients-list__item {
+  @include items-grid;
+
+  height: 92px;
+}
+
+.clients-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  color: $client-link-color;
+
+  border: 1px solid $client-link-color;
+  border-radius: 4px;
+
+  transition-property: color, border;
+  transition-duration: $anim-time;
+  transition-timing-function: $anim-ft;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+
+    border: 1px solid $color-accent;
+  }
+}
+
+.clients-list__icon {
+  fill: currentColor;
+}

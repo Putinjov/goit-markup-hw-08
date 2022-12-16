@@ -1,0 +1,56 @@
+.feature-list {
+  @include grid;
+
+  --items: 1;
+
+  @media screen and (min-width: 768px) {
+    --items: 2;
+  }
+
+  @media screen and (min-width: 1200px) {
+    --items: 4;
+  }
+}
+
+.feature-list__item {
+  @include items-grid;
+}
+
+.feature-list__title {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  text-transform: uppercase;
+
+  color: $color-title;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.feature-list__image {
+  display: flex;
+
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $secondary-bgc;
+
+  border-radius: 4px;
+}
+
+.feature-list__content {
+  padding-top: 30px;
+}
+
+.feature-list__text {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}

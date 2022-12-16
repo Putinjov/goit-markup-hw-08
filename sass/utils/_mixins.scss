@@ -1,0 +1,14 @@
+@mixin section($pt: 60px, $pb: 60px) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+}
+
+@mixin grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+}
+
+@mixin items-grid {
+  flex-basis: calc((100% - ($items - 1) * $gap / $items));
+}

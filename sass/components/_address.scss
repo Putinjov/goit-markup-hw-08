@@ -1,0 +1,35 @@
+.address__link {
+  line-height: 1.14;
+  font-style: normal;
+
+  color: $contacts-footer-colors;
+
+  transition-property: color;
+  transition-duration: $anim-time;
+  transition-timing-function: $anim-ft;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
+
+.address__item {
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 12px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
+}
+
+.address__link--white {
+  color: $basic-white-color;
+}
