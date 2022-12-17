@@ -370,7 +370,7 @@ summary {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 24px;
-  line-height: 1.1666666667;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   text-decoration: none;
   color: #2196f3;
@@ -378,7 +378,7 @@ summary {
 @media screen and (min-width: 1200px) {
   .logo {
     font-size: 26px;
-    line-height: 1.1923076923;
+    line-height: 1.19;
   }
 }
 
@@ -1166,6 +1166,7 @@ summary {
   line-height: 1.62;
   letter-spacing: 0.03em;
   color: #212121;
+  border: none;
   background-color: #f5f4fa;
   border-radius: 4px;
   cursor: pointer;
@@ -1689,8 +1690,10 @@ summary {
   list-style: none;
   margin-bottom: auto;
 }
-
-.mobile-menu-link {
+.mobile-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mobile-menu__link {
   display: block;
   font-weight: 500;
   font-size: 40px;
@@ -1700,31 +1703,26 @@ summary {
   text-decoration: none;
 }
 
-.mobile-menu-item:not(:last-child) {
-  margin-bottom: 32px;
-}
-
 .mobile-contact-container {
   margin-bottom: 64px;
 }
 
-.mobile-contact-item {
+.mobile-contact__item {
   font-weight: 500;
   font-size: 24px;
   line-height: 1.16;
   letter-spacing: 0.02em;
   color: #757575;
 }
-
-.mobile-menu-link--currunt {
-  color: #2196f3;
-}
-
-.mobile-contact-item:not(:last-child) {
+.mobile-contact__item:not(:last-child) {
   margin-bottom: 32px;
 }
 
-.mobile-contact-link--blu {
+.mobile-menu__link:hover, .mobile-menu__link:focus {
+  color: #2196f3;
+}
+
+.mobile-contact__link--blu {
   font-size: 34px;
   line-height: 1.17;
   color: #2196f3;
@@ -1737,7 +1735,7 @@ summary {
   gap: 20px;
 }
 
-.mobile-socials-item {
+.mobile-socials__item {
   position: relative;
   font-weight: 500;
   font-size: 18px;
@@ -1746,7 +1744,7 @@ summary {
   color: #2196f3;
 }
 
-.mobile-socials-item:not(:last-child)::after {
+.mobile-socials__item:not(:last-child)::after {
   position: absolute;
   top: 0;
   right: 10p;
