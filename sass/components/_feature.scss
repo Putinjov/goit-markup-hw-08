@@ -1,19 +1,17 @@
 .feature-list {
   @include grid;
-
-  --items: 1;
-
-  @media screen and (min-width: 768px) {
-    --items: 2;
-  }
-
-  @media screen and (min-width: 1200px) {
-    --items: 4;
-  }
 }
 
 .feature-list__item {
-  @include items-grid;
+  flex-basis: calc((100% - 30px)/1);
+
+  @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - $gap)/2);
+    }
+
+  @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 3 * $gap)/4);
+        }
 }
 
 .feature-list__title {

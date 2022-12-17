@@ -9,6 +9,3 @@
   gap: $gap;
 }
 
-@mixin items-grid {
-  flex-basis: calc((100% - ($items - 1) * $gap / $items));
-}

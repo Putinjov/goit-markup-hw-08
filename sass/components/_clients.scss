@@ -1,20 +1,24 @@
 .clients-list {
   @include grid;
-
-  --items: 2;
-
-  @media screen and (min-width: 768px) {
-    --items: 3;
-  }
-
-  @media screen and (min-width: 1200px) {
-    --items: 6;
-  }
 }
 .clients-list__item {
-  @include items-grid;
-
-  height: 92px;
+    height: 92px;
+    @media screen and (max-width:479px) {
+      flex-basis: calc((100% - $gap)/1);
+      
+    }
+    @media screen and (min-width:480px) {
+      flex-basis: calc((100% - $gap)/2);
+    }
+    
+    
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 2*$gap)/3);
+    }
+    
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 5 * $gap)/6);
+    }
 }
 
 .clients-list__link {
