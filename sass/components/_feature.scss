@@ -3,7 +3,6 @@
 }
 
 .feature-list__item {
-  flex-basis: calc((100% - 30px)/1);
 
   @media screen and (min-width: 768px) {
       flex-basis: calc((100% - $gap)/2);
